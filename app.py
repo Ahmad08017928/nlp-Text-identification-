@@ -71,7 +71,8 @@ def main():
         stemmed_tokens = stem_tokens(clean_tokens)
         
         # Load data
-        data = pd.read_csv('data\dataset_tweet_sentiment_opini_film.csv')
+        data = ("https://raw.githubusercontent.com/Ahmad08017928/nlp-Text-identification-/main/data/dataset_tweet_sentiment_opini_film.csv")
+        data = pd.read_csv(data)
         
         # Calculate TF-IDF
         vocab = set(word for word in ' '.join(data['Text Tweet']).split())
